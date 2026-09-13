@@ -1,0 +1,49 @@
+# Python
+
+**pycache**/
+*.pyc
+*.pyo
+*.pyd
+
+# Environment
+
+heal/
+venv/
+.env
+.streamlit/secrets.toml
+
+# VS Code
+
+.vscode/
+
+# Jupyter
+
+.ipynb_checkpoints/
+
+# Logs
+
+*.log
+
+# Cache
+
+.cache/
+.pytest_cache/
+
+# OS
+
+.DS_Store
+Thumbs.db
+
+# Temporary Files
+
+temp/
+tmp/
+
+# Streamlit Cache
+
+.streamlit/cache/
+
+# Build
+
+dist/
+build/

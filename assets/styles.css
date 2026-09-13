@@ -1,0 +1,630 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@500;600;700&display=swap');
+
+
+
+:root{
+
+    --primary:#2563EB;
+    --secondary:#06B6D4;
+    --success:#16A34A;
+    --warning:#F59E0B;
+    --danger:#DC2626;
+    --purple:#7C3AED;
+
+    --text:#E5E7EB;
+    --muted:#94A3B8;
+
+    --card:rgba(20,30,48,.70);
+    --card2:rgba(30,41,59,.70);
+
+    --border:rgba(255,255,255,.08);
+
+    --radius:22px;
+}
+
+/* ---------- APP BACKGROUND ---------- */
+
+.stApp{
+    background:
+        radial-gradient(circle at top left,#3855b4 0%,#112452 35%,#020617 100%);
+    font-family:"Inter",sans-serif;
+    color:white;
+}
+
+/* Remove default padding */
+
+.block-container{
+    padding:1rem 2rem 2rem;
+}
+
+/* Hide Streamlit branding */
+
+#MainMenu,
+footer,
+/* Hide top toolbar only, not sidebar toggle */
+header[data-testid="stHeader"]{
+    background: transparent;
+}
+
+/* ==========================================================
+   SIDEBAR
+   ========================================================== */
+
+section[data-testid="stSidebar"]{
+    background:linear-gradient(180deg,#00050f,#0F172A,#111827);
+    border-right:1px solid rgba(181, 165, 165, 0.941);
+}
+
+section[data-testid="stSidebar"] *{
+    color:#acaeb2;
+}
+
+.sidebar-title{
+    font-size:26px;
+    font-weight:700;
+    color:white;
+}
+
+.sidebar-card{
+    background:linear-gradient(135deg,#1D4ED8,#2563EB);
+    padding:18px;
+    border-radius:20px;
+    color:white;
+    margin-bottom:20px;
+    box-shadow:0 15px 35px rgba(211, 214, 221, 0.35);
+}
+
+/* ==========================================================
+   PAGE HEADER
+   ========================================================== */
+
+.page-header{
+
+    padding:30px;
+    border-radius:28px;
+
+    background:
+        linear-gradient(120deg,#2563EB,#0891B2,#7C3AED);
+
+    color:rgb(113, 216, 204);
+
+    box-shadow:
+        0 20px 60px rgba(37,99,235,.35);
+
+    margin-bottom:25px;
+}
+
+.page-header h1{
+    font-family:"Poppins",sans-serif;
+    font-size:42px;
+    margin: 20px;
+    font-weight:700;
+}
+
+.page-header p{
+    opacity:.92;
+    margin-top:0px;
+    font-size:17px;
+}
+
+/* ==========================================================
+   KPI CARDS
+   ========================================================== */
+
+.kpi-card{
+
+    background:rgba(15,23,42,.82);
+
+    backdrop-filter:blur(18px);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    border-radius:22px;
+
+    padding:22px;
+
+    transition:.35s;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.25);
+
+    overflow:hidden;
+
+    position:relative;
+
+    min-height:150px;
+}
+
+.kpi-card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:0 18px 45px rgba(37,99,235,.25);
+
+    border-color:#2563EB;
+}
+
+.kpi-card::before{
+
+    content:"";
+
+    position:absolute;
+    top:0;
+    left:0;
+
+    width:100%;
+    height:4px;
+
+    background:linear-gradient(90deg,#2563EB,#06B6D4,#7C3AED);
+}
+
+.kpi-icon{
+    font-size:28px;
+    margin-bottom:12px;
+}
+
+.kpi-label{
+
+    font-size:13px;
+
+    color:#2c70cf;
+
+    letter-spacing:.4px;
+
+    text-transform:uppercase;
+}
+
+.kpi-value{
+
+    font-size:34px;
+
+    font-weight:700;
+
+    margin-top:8px;
+
+    color:white;
+}
+
+.kpi-growth{
+
+    display:inline-block;
+
+    margin-top:14px;
+
+    padding:6px 12px;
+
+    background:rgba(22,163,74,.15);
+
+    border:1px solid rgba(22,163,74,.35);
+
+    color:#4ADE80;
+
+    border-radius:999px;
+
+    font-weight:600;
+
+    font-size:13px;
+}
+
+/* ==========================================================
+   SECTION TITLE
+   ========================================================== */
+
+.section-title{
+
+    color:rgb(244, 240, 240);
+
+    font-family:"Poppins";
+
+    font-size:24px;
+
+    margin:10px 0 18px;
+}
+
+/* ==========================================================
+   GLASS CARD
+   ========================================================== */
+
+.glass-card{
+
+    background:rgba(30,41,59,.65);
+
+    backdrop-filter:blur(16px);
+
+    border-radius:24px;
+
+    padding:24px;
+
+    border:1px solid rgba(255,255,255,.08);
+
+    box-shadow:0 12px 35px rgba(0,0,0,.25);
+
+    margin-bottom:20px;
+}
+
+/* ==========================================================
+   PLOTLY CONTAINER
+   ========================================================== */
+
+.chart-card{
+
+    background:#111827;
+
+    border-radius:24px;
+
+    padding:18px;
+
+    border:1px solid rgba(255,255,255,.06);
+
+    box-shadow:0 12px 35px rgba(230, 222, 222, 0.2);
+}
+
+/* ==========================================================
+   BUTTONS
+   ========================================================== */
+
+.stButton>button{
+
+    width:100%;
+
+    border-radius:16px;
+
+    border:none;
+
+    padding:14px;
+
+    font-weight:600;
+
+    color:white;
+
+    background:linear-gradient(135deg,#2563EB,#06B6D4);
+
+    transition:.3s;
+
+    box-shadow:0 10px 25px rgba(37,99,235,.25);
+}
+
+.stButton>button:hover{
+
+    transform:translateY(-2px);
+
+    box-shadow:0 16px 35px rgba(6,182,212,.30);
+}
+
+/* ==========================================================
+   SELECTBOX / INPUT
+   ========================================================== */
+
+.stSelectbox div[data-baseweb="select"]>div{
+
+    background:#1E293B;
+
+    border-radius:14px;
+
+    border:1px solid rgba(255,255,255,.08);
+
+    color:white;
+}
+
+.stTextInput input,
+.stNumberInput input{
+
+    background:#1E293B !important;
+
+    color:white !important;
+
+    border-radius:14px !important;
+
+    border:1px solid rgba(255,255,255,.08) !important;
+}
+
+/* ==========================================================
+   DATAFRAME
+   ========================================================== */
+
+[data-testid="stDataFrame"]{
+
+    border-radius:18px;
+
+    overflow:hidden;
+
+    border:1px solid rgba(255,255,255,.06);
+}
+
+/* ==========================================================
+   METRICS
+   ========================================================== */
+
+[data-testid="metric-container"]{
+
+    background:#111827;
+
+    border-radius:18px;
+
+    padding:16px;
+
+    border:1px solid rgba(255,255,255,.05);
+}
+
+/* ==========================================================
+   ALERTS
+   ========================================================== */
+
+.success-box{
+
+    background:rgba(22,163,74,.12);
+
+    border-left:6px solid #16A34A;
+
+    padding:18px;
+
+    border-radius:16px;
+}
+
+.warning-box{
+
+    background:rgba(245,158,11,.12);
+
+    border-left:6px solid #F59E0B;
+
+    padding:18px;
+
+    border-radius:16px;
+}
+
+.danger-box{
+
+    background:rgba(220,38,38,.12);
+
+    border-left:6px solid #DC2626;
+
+    padding:18px;
+
+    border-radius:16px;
+}
+
+/* ==========================================================
+   SCROLLBAR
+   ========================================================== */
+
+::-webkit-scrollbar{
+    width:8px;
+}
+
+::-webkit-scrollbar-thumb{
+    background:#2563EB;
+    border-radius:20px;
+}
+
+/* ==========================================================
+   ANIMATIONS
+   ========================================================== */
+
+@keyframes fadeUp{
+
+    from{
+        opacity:0;
+        transform:translateY(15px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0px);
+    }
+}
+
+.glass-card,
+.kpi-card,
+.chart-card{
+
+    animation:fadeUp .55s ease;
+}
+
+/* ==========================================================
+   FOOTER
+   ========================================================== */
+
+/* ==========================================================
+   PREMIUM ENTERPRISE FOOTER
+   ========================================================== */
+
+.footer-wrapper{
+    margin-top:40px;
+    margin-bottom:10px;
+}
+
+.footer{
+
+    position:relative;
+
+    overflow:hidden;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(15,23,42,.95),
+            rgba(30,41,59,.92)
+        );
+
+    backdrop-filter:blur(18px);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    border-radius:26px;
+
+    padding:28px;
+
+    box-shadow:
+        0 12px 40px rgba(0,0,0,.35);
+
+    color:#E2E8F0;
+}
+
+/* Top Gradient Line */
+
+.footer::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+    left:0;
+
+    width:100%;
+    height:4px;
+
+    background:linear-gradient(
+        90deg,
+        #2563EB,
+        #06B6D4,
+        #7C3AED,
+        #2563EB
+    );
+
+    background-size:300% 300%;
+
+    animation:footerGradient 8s linear infinite;
+}
+
+@keyframes footerGradient{
+
+    0%{background-position:0% 50%;}
+    100%{background-position:100% 50%;}
+}
+
+.footer-title{
+
+    font-family:"Poppins",sans-serif;
+
+    font-size:24px;
+
+    font-weight:700;
+
+    color:white;
+
+    margin-bottom:8px;
+}
+
+.footer-desc{
+
+    color:#94A3B8;
+
+    font-size:14px;
+
+    line-height:1.7;
+
+    margin-bottom:22px;
+}
+
+/* Footer Grid */
+
+.footer-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+
+    gap:18px;
+
+    margin-bottom:22px;
+}
+
+/* Footer Card */
+
+.footer-card{
+
+    background:rgba(255,255,255,.03);
+
+    border:1px solid rgba(255,255,255,.05);
+
+    border-radius:18px;
+
+    padding:18px;
+
+    transition:.3s;
+}
+
+.footer-card:hover{
+
+    transform:translateY(-4px);
+
+    border-color:#2563EB;
+
+    box-shadow:0 10px 25px rgba(37,99,235,.20);
+}
+
+.footer-card h4{
+
+    margin:0;
+
+    color:#38BDF8;
+
+    font-size:13px;
+
+    text-transform:uppercase;
+
+    letter-spacing:.8px;
+}
+
+.footer-card p{
+
+    margin-top:8px;
+
+    color:white;
+
+    font-weight:600;
+
+    font-size:15px;
+}
+
+/* Divider */
+
+.footer-divider{
+
+    width:100%;
+
+    height:1px;
+
+    background:rgba(255,255,255,.08);
+
+    margin:20px 0;
+}
+
+/* Bottom */
+
+.footer-bottom{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    flex-wrap:wrap;
+
+    gap:12px;
+}
+
+.footer-copy{
+
+    color:#64748B;
+
+    font-size:13px;
+}
+
+.footer-badge{
+
+    padding:8px 16px;
+
+    border-radius:999px;
+
+    background:rgba(37,99,235,.15);
+
+    color:#60A5FA;
+
+    border:1px solid rgba(96,165,250,.35);
+
+    font-size:13px;
+
+    font-weight:700;
+}
