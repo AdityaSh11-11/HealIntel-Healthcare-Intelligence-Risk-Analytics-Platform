@@ -1,10 +1,8 @@
 <div align="center">
 
-# Healthcare Intelligence Platform
+# HealIntel - Healthcare Intelligence Risk Analytics Platform
 
-### AI-Powered End-to-End Healthcare Analytics & Business Intelligence Ecosystem
-
-<img src="assets/banner.png" alt="Healthcare Banner" width="100%"/>
+### End-to-End Healthcare Analytics & Business Intelligence Ecosystem
 
 <p align="center">
   <img src="https://img.shields.io/badge/Python-3.12-blue?style=for-the-badge&logo=python"/>
